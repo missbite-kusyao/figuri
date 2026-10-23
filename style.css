@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff0f5;
+    background-image: 
+        radial-gradient(#e6e6fa 15%, transparent 16%),
+        radial-gradient(#ffe4e1 15%, transparent 16%);
+    background-size: 60px 60px;
+    background-position: 0 0, 30px 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+
+.shape {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #5c527f;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 8px 20px rgba(180, 160, 200, 0.3);
+    backdrop-filter: blur(4px);
+    transition: transform 0.3s ease;
+}
+
+.shape:hover {
+    transform: scale(1.05) rotate(2deg);
+}
+
+.rectangle {
+    width: 240px;
+    height: 120px;
+    top: 8%;
+    left: 8%;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #ffc0cb, #e6e6fa); /* Пастельно-розовый к лавандовому */
+    border: 2px dashed #ffffff;
+}
+
+.square {
+    width: 150px;
+    height: 150px;
+    top: 12%;
+    right: 12%;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #d8bfd8, #b0e0e6); /* Чертополоховый к пастельно-голубому */
+    border: 3px solid #ffffff;
+}
+
+.circle {
+    width: 180px;
+    height: 180px;
+    top: 40%;
+    left: 42%;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #ffffff, #ffd1dc); /* Белый к ангельскому розовому */
+    border: 2px solid #e6e6fa;
+}
+
+.oval {
+    width: 220px;
+    height: 130px;
+    bottom: 12%;
+    left: 10%;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #e0ffff, #ffe4e1); /* Мятно-голубой к персиковому */
+    border: 2px stroke #ffffff;
+}
+
+.weird-shape {
+    width: 200px;
+    height: 190px;
+    bottom: 10%;
+    right: 10%;
+    /* Кастомная форма, сгенерированная через clip-path */
+    clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 19% 92%, 0% 62%, 8% 25%);
+    background: linear-gradient(135deg, #f3e5f5, #fce4ec, #e8eaf6); /* Пастельный триколор */
+}
